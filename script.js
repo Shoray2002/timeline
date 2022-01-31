@@ -20,13 +20,13 @@ chart.data = [
   //   color: colorSet.getIndex(1),
   //   task: "IIITL Cup prelims",
   // },
-  // {
-  //   category: "Module #4",
-  //   start: "2022-04-07 20:00",
-  //   end: "2022-04-10 24:00",
-  //   color: colorSet.getIndex(2),
-  //   task: "Treasure Hunt",
-  // },
+  {
+    category: "Module #1",
+    start: "2022-04-07 20:00",
+    end: "2022-04-10 24:00",
+    color: colorSet.getIndex(2),
+    task: "Treasure Hunt",
+  },
   {
     category: "Module #5",
     start: "2022-04-08 12:00",
@@ -64,37 +64,37 @@ chart.data = [
   },
   {
     category: "Module #2",
-    start: "2022-04-09 20:00",
-    end: "2022-04-10 00:00",
+    start: "2022-04-09 18:00",
+    end: "2022-04-10 21:00",
     color: colorSet.getIndex(7),
     task: "Appophilia",
   },
   {
-    category: "Module #2",
+    category: "Module #3",
     start: "2022-04-10 12:00",
     end: "2022-04-10 18:00",
-    color: colorSet.getIndex(7),
+    color: colorSet.getIndex(8),
     task: "Dream in Code",
   },
   {
-    category: "Module #2",
+    category: "Module #4",
     start: "2022-04-10 12:00",
     end: "2022-04-10 15:00",
-    color: colorSet.getIndex(7),
+    color: colorSet.getIndex(9),
     task: "BattleSnek",
   },
   {
-    category: "Module #2",
+    category: "Module #3",
     start: "2022-04-10 18:00",
     end: "2022-04-10 22:00",
-    color: colorSet.getIndex(7),
+    color: colorSet.getIndex(10),
     task: "WebManiac",
   },
 ];
 
 chart.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm";
 chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
-chart.fontSize = 20;
+chart.fontSize = 14;
 chart.background.fill = am4core.color("#000000");
 
 var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
@@ -109,9 +109,11 @@ categoryAxis.renderer.minGridDistance = 25;
 categoryAxis.renderer.innerRadius = -60;
 categoryAxis.renderer.radius = 120;
 categoryAxis.tooltip.label.fill = am4core.color("#ffffff");
+
+
 var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 1;
-dateAxis.baseInterval = { count: 2, timeUnit: "hour" };
+dateAxis.baseInterval = { count: 3, timeUnit: "hour" };
 dateAxis.renderer.tooltipLocation = 0;
 dateAxis.startLocation = 0;
 dateAxis.renderer.line.strokeDasharray = "1,4";
@@ -121,6 +123,12 @@ dateAxis.tooltip.background.fillOpacity = 0.2;
 dateAxis.tooltip.background.cornerRadius = 20;
 dateAxis.tooltip.label.fill = am4core.color("#ffffff");
 dateAxis.tooltip.label.paddingTop = 7;
+
+
+
+
+
+
 
 var labelTemplate = dateAxis.renderer.labels.template;
 labelTemplate.verticalCenter = "middle";
